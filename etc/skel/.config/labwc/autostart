@@ -1,0 +1,28 @@
+# Kiro labwc — autostart (~/.config/labwc/autostart)
+# Plain shell script of session services — the simplest autostart model in the
+# line. labwc runs it on startup.
+
+# Authentication agent + environment for portals/screensharing.
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+dbus-update-activation-environment --systemd --all
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+# Create XDG user dirs on first login (labwc runs no /etc/xdg/autostart).
+xdg-user-dirs-update &
+
+# Mirror GTK theme/icons/cursor/font into gsettings for GTK4/libadwaita apps.
+~/.config/labwc/scripts/import-gsettings.sh &
+
+# Wallpaper + pywal theming (palette → waybar/mako/titlebar themerc).
+swaybg -m fill -i ~/.config/labwc/bg/kiro.jpg &
+~/.config/labwc/scripts/set-theme.sh &
+
+# Bar (GTK_A11Y=none skips the at-spi bus so waybar paints immediately at login
+# instead of stalling ~25s), notifications, idle-lock daemon, network applet.
+env GTK_A11Y=none waybar &
+mako &
+hypridle &
+nm-applet --indicator &
+
+# Live ISO only: auto-launch the installer. kiro_final strips this line on install.
+sh -c '[ -d /run/archiso/bootmnt ] && calamares_polkit -d -style kvantum' &

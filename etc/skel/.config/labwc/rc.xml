@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!--
+  Kiro labwc — rc.xml  (~/.config/labwc/rc.xml)
+  ════════════════════════════════════════════════════════════════════════
+  The Openbox-style "lightweight traditional desktop" of the KIROTUX Wayland
+  line — STACKING, not tiling. Kiro's SUPER grammar (CTRL+ALT launchers,
+  SUPER+F1..F12) layered onto labwc's Openbox vocabulary: snap-to-edge as the
+  poor-man's tiling, Openbox "desktops" as workspaces, a right-click root menu
+  (menu.xml). Titlebar colours come from themerc-override (pywal). Live-reload
+  any edit with the Reconfigure action (Super+Shift+R).
+  Reference: labwc-config.5 / labwc-actions.5 / labwc-theme.5
+-->
+<labwc_config>
+
+  <theme>
+    <cornerRadius>8</cornerRadius>
+    <font name="JetBrainsMono Nerd Font" size="10" />
+  </theme>
+
+  <!-- Openbox "desktops" = workspaces (Super+1..9). -->
+  <desktops>
+    <number>9</number>
+  </desktops>
+
+  <keyboard>
+    <default />
+
+    <!-- Applications & launchers -->
+    <keybind key="W-Return"><action name="Execute" command="alacritty" /></keybind>
+    <keybind key="W-t"><action name="Execute" command="alacritty" /></keybind>
+    <keybind key="W-S-Return"><action name="Execute" command="thunar" /></keybind>
+    <keybind key="W-e"><action name="Execute" command="code" /></keybind>
+    <keybind key="W-d"><action name="Execute" command="rofi -show drun" /></keybind>
+    <keybind key="W-space"><action name="Execute" command="rofi -show drun" /></keybind>
+    <keybind key="W-S-d"><action name="Execute" command="rofi -show run" /></keybind>
+    <keybind key="W-r"><action name="Execute" command="rofi-theme-selector" /></keybind>
+    <keybind key="A-r"><action name="Execute" command="rofi-theme-selector" /></keybind>
+    <keybind key="W-v"><action name="Execute" command="pavucontrol" /></keybind>
+    <keybind key="W-o"><action name="Execute" command="hyprpicker -a" /></keybind>
+
+    <!-- CTRL+ALT launchers (Kiro scheme) -->
+    <keybind key="C-A-a"><action name="Execute" command="alacritty-tweak-tool" /></keybind>
+    <keybind key="C-A-q"><action name="Execute" command="alacritty-tweak-tool" /></keybind>
+    <keybind key="C-A-b"><action name="Execute" command="brave --password-store=basic" /></keybind>
+    <keybind key="C-A-c"><action name="Execute" command="chromium -no-default-browser-check" /></keybind>
+    <keybind key="C-A-g"><action name="Execute" command="chromium -no-default-browser-check" /></keybind>
+    <keybind key="C-A-d"><action name="Execute" command="obs" /></keybind>
+    <keybind key="C-A-e"><action name="Execute" command="archlinux-tweak-tool" /></keybind>
+    <keybind key="C-A-f"><action name="Execute" command="firefox" /></keybind>
+    <keybind key="C-A-i"><action name="Execute" command="kiro-iso-builder" /></keybind>
+    <keybind key="C-A-m"><action name="Execute" command="mintstick -m iso" /></keybind>
+    <keybind key="C-A-o"><action name="Execute" command="opera" /></keybind>
+    <keybind key="C-A-p"><action name="Execute" command="pamac-manager" /></keybind>
+    <keybind key="C-A-s"><action name="Execute" command="fish-tweak-tool" /></keybind>
+    <keybind key="C-A-u"><action name="Execute" command="pavucontrol" /></keybind>
+    <keybind key="C-A-v"><action name="Execute" command="vivaldi-stable" /></keybind>
+    <keybind key="C-A-w"><action name="Execute" command="fastfetch-tweak-tool" /></keybind>
+    <keybind key="C-A-z"><action name="Execute" command="fastfetch-tweak-tool" /></keybind>
+    <keybind key="C-A-Return"><action name="Execute" command="alacritty" /></keybind>
+    <keybind key="C-A-t"><action name="Execute" command="alacritty" /></keybind>
+    <keybind key="C-A-End"><action name="Execute" command="alacritty --class btop -e btop" /></keybind>
+
+    <!-- SUPER + F1..F12 app keys (Kiro scheme) -->
+    <keybind key="W-F1"><action name="Execute" command="firefox" /></keybind>
+    <keybind key="W-F2"><action name="Execute" command="code" /></keybind>
+    <keybind key="W-F3"><action name="Execute" command="inkscape" /></keybind>
+    <keybind key="W-F4"><action name="Execute" command="gimp" /></keybind>
+    <keybind key="W-F5"><action name="Execute" command="meld" /></keybind>
+    <keybind key="W-F6"><action name="Execute" command="vlc" /></keybind>
+    <keybind key="W-F7"><action name="Execute" command="virtualbox" /></keybind>
+    <keybind key="W-F8"><action name="Execute" command="thunar" /></keybind>
+    <keybind key="W-F9"><action name="Execute" command="virt-manager" /></keybind>
+    <keybind key="W-F10"><action name="Execute" command="spotify" /></keybind>
+    <keybind key="W-F11"><action name="Execute" command="rofi -show drun" /></keybind>
+    <keybind key="W-F12"><action name="Execute" command="rofi -show drun" /></keybind>
+
+    <!-- Window management (Openbox) -->
+    <keybind key="W-q"><action name="Close" /></keybind>
+    <keybind key="W-S-q"><action name="Close" /></keybind>
+    <keybind key="W-f"><action name="ToggleFullscreen" /></keybind>
+    <keybind key="W-m"><action name="ToggleMaximize" /></keybind>
+    <keybind key="W-Tab"><action name="NextWindow" /></keybind>
+    <keybind key="W-S-Tab"><action name="PreviousWindow" /></keybind>
+    <keybind key="A-Tab"><action name="NextWindow" /></keybind>
+    <keybind key="A-S-Tab"><action name="PreviousWindow" /></keybind>
+
+    <!-- Snap-to-edge: the poor-man's tiling (half/quarter) -->
+    <keybind key="W-Left"><action name="SnapToEdge" direction="left" /></keybind>
+    <keybind key="W-Right"><action name="SnapToEdge" direction="right" /></keybind>
+    <keybind key="W-Up"><action name="SnapToEdge" direction="up" /></keybind>
+    <keybind key="W-Down"><action name="SnapToEdge" direction="down" /></keybind>
+
+    <!-- Desktops (workspaces) -->
+    <keybind key="W-1"><action name="GoToDesktop" to="1" /></keybind>
+    <keybind key="W-2"><action name="GoToDesktop" to="2" /></keybind>
+    <keybind key="W-3"><action name="GoToDesktop" to="3" /></keybind>
+    <keybind key="W-4"><action name="GoToDesktop" to="4" /></keybind>
+    <keybind key="W-5"><action name="GoToDesktop" to="5" /></keybind>
+    <keybind key="W-6"><action name="GoToDesktop" to="6" /></keybind>
+    <keybind key="W-7"><action name="GoToDesktop" to="7" /></keybind>
+    <keybind key="W-8"><action name="GoToDesktop" to="8" /></keybind>
+    <keybind key="W-9"><action name="GoToDesktop" to="9" /></keybind>
+    <keybind key="W-S-1"><action name="SendToDesktop" to="1" /></keybind>
+    <keybind key="W-S-2"><action name="SendToDesktop" to="2" /></keybind>
+    <keybind key="W-S-3"><action name="SendToDesktop" to="3" /></keybind>
+    <keybind key="W-S-4"><action name="SendToDesktop" to="4" /></keybind>
+    <keybind key="W-S-5"><action name="SendToDesktop" to="5" /></keybind>
+    <keybind key="W-S-6"><action name="SendToDesktop" to="6" /></keybind>
+    <keybind key="W-S-7"><action name="SendToDesktop" to="7" /></keybind>
+    <keybind key="W-S-8"><action name="SendToDesktop" to="8" /></keybind>
+    <keybind key="W-S-9"><action name="SendToDesktop" to="9" /></keybind>
+    <keybind key="W-period"><action name="GoToDesktop" to="right" wrap="yes" /></keybind>
+    <keybind key="W-comma"><action name="GoToDesktop" to="left" wrap="yes" /></keybind>
+
+    <!-- Media & brightness -->
+    <keybind key="XF86AudioRaiseVolume"><action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" /></keybind>
+    <keybind key="XF86AudioLowerVolume"><action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" /></keybind>
+    <keybind key="XF86AudioMute"><action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" /></keybind>
+    <keybind key="XF86AudioPlay"><action name="Execute" command="playerctl play-pause" /></keybind>
+    <keybind key="XF86AudioNext"><action name="Execute" command="playerctl next" /></keybind>
+    <keybind key="XF86AudioPrev"><action name="Execute" command="playerctl previous" /></keybind>
+    <keybind key="XF86MonBrightnessUp"><action name="Execute" command="brightnessctl set 5%+" /></keybind>
+    <keybind key="XF86MonBrightnessDown"><action name="Execute" command="brightnessctl set 5%-" /></keybind>
+
+    <!-- Screenshots -->
+    <keybind key="Print"><action name="Execute" command="sh -c 'grim -g &quot;$(slurp)&quot; - | wl-copy'" /></keybind>
+    <keybind key="W-Print"><action name="Execute" command="sh -c 'grim - | wl-copy'" /></keybind>
+
+    <!-- System & session -->
+    <keybind key="W-x"><action name="Execute" command="archlinux-logout" /></keybind>
+    <keybind key="W-S-x"><action name="Execute" command="kiro-powermenu" /></keybind>
+    <keybind key="W-C-s"><action name="Execute" command="kiro-keybindings" /></keybind>
+    <keybind key="C-A-k"><action name="Execute" command="archlinux-logout" /></keybind>
+    <keybind key="C-A-l"><action name="Execute" command="archlinux-logout --settings" /></keybind>
+    <keybind key="C-A-r"><action name="Execute" command="archlinux-betterlockscreen" /></keybind>
+    <keybind key="W-S-r"><action name="Reconfigure" /></keybind>
+  </keyboard>
+
+  <mouse>
+    <default />
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="root-menu" />
+      </mousebind>
+    </context>
+  </mouse>
+
+  <!-- Window rules (Openbox identifiers = app_id) -->
+  <windowRules>
+    <windowRule identifier="pavucontrol" serverDecoration="default"><action name="Focus" /></windowRule>
+  </windowRules>
+
+</labwc_config>

@@ -1,0 +1,30 @@
+# Kiro labwc — themerc-override (titlebar / menu / osd theme, Tokyo Night).
+# This is the labwc-specific palette surface: window decorations are themed
+# SEPARATELY from waybar. Regenerated at login by scripts/set-theme.sh (pywal)
+# then applied with `labwc --reconfigure`.
+
+border.width: 2
+
+# window border + titlebar
+window.active.border.color: #7aa2f7
+window.inactive.border.color: #414868
+window.active.title.bg.color: #1a1b26
+window.inactive.title.bg.color: #16161e
+window.active.label.text.color: #c0caf5
+window.inactive.label.text.color: #565f89
+window.active.button.unpressed.image.color: #c0caf5
+window.inactive.button.unpressed.image.color: #565f89
+
+# menu (the right-click root menu)
+menu.border.color: #7aa2f7
+menu.items.bg.color: #1a1b26
+menu.items.text.color: #c0caf5
+menu.items.active.bg.color: #7aa2f7
+menu.items.active.text.color: #1a1b26
+menu.title.bg.color: #7aa2f7
+menu.title.text.color: #1a1b26
+
+# on-screen display (window switcher)
+osd.bg.color: #1a1b26
+osd.border.color: #7aa2f7
+osd.label.text.color: #c0caf5

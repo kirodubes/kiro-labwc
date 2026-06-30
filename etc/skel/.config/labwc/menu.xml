@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kiro labwc root menu — the Openbox-heritage right-click menu (labwc's signature). -->
+<openbox_menu>
+
+<menu id="root-menu" label="Kiro">
+  <item label="Terminal">
+    <action name="Execute" command="alacritty" />
+  </item>
+  <item label="File Manager">
+    <action name="Execute" command="thunar" />
+  </item>
+  <item label="Web Browser">
+    <action name="Execute" command="firefox" />
+  </item>
+  <item label="App Launcher">
+    <action name="Execute" command="rofi -show drun" />
+  </item>
+  <separator />
+  <menu id="kiro-tools" label="Kiro Tools">
+    <item label="Tweak Tool">
+      <action name="Execute" command="archlinux-tweak-tool" />
+    </item>
+    <item label="Package Manager">
+      <action name="Execute" command="pamac-manager" />
+    </item>
+    <item label="Theme Selector">
+      <action name="Execute" command="rofi-theme-selector" />
+    </item>
+    <item label="Keybindings">
+      <action name="Execute" command="kiro-keybindings" />
+    </item>
+  </menu>
+  <separator />
+  <item label="Reconfigure labwc">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Lock Screen">
+    <action name="Execute" command="archlinux-betterlockscreen" />
+  </item>
+  <item label="Logout">
+    <action name="Execute" command="archlinux-logout" />
+  </item>
+</menu>
+
+</openbox_menu>

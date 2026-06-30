@@ -1,0 +1,14 @@
+# Kiro labwc — environment (~/.config/labwc/environment)
+# Belgian + US layout (matches the rest of the Kiro line), Caps = Compose.
+XKB_DEFAULT_LAYOUT=be,us
+XKB_DEFAULT_OPTIONS=compose:caps
+
+# Cursor.
+XCURSOR_THEME=Bibata-Modern-Ice
+XCURSOR_SIZE=24
+
+# Toolkit backends — prefer Wayland.
+MOZ_ENABLE_WAYLAND=1
+QT_QPA_PLATFORM=wayland;xcb
+GDK_BACKEND=wayland,x11,*
+# labwc sets XDG_CURRENT_DESKTOP=labwc:wlroots itself; left here for completeness.
