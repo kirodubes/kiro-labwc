@@ -16,11 +16,16 @@ Format: one dated entry per day (`YYYY.MM.DD`), newest first.
 ### Technical Details
 - Verified no existing bare-Alt binds collided with alt+n/p/t/f/w/arrows before adding (only
   `super`/`W-` combos existed on those keys).
+- **Added a waybar top-left app-launcher icon**, wired to `rofi -show drun` — the same command
+  already bound to `SUPER+D`, not a new launcher backend (unlike kiro-wayfire, which got a
+  fuzzel/nwg-drawer swap the same day; labwc keeps plain rofi for now).
 
 ### Files Modified
 - [etc/skel/.config/labwc/rc.xml](etc/skel/.config/labwc/rc.xml)
 - [etc/skel/.config/labwc/autostart](etc/skel/.config/labwc/autostart)
 - [etc/skel/.config/labwc/keybindings.txt](etc/skel/.config/labwc/keybindings.txt)
+- [etc/skel/.config/waybar/config-labwc.jsonc](etc/skel/.config/waybar/config-labwc.jsonc)
+- [CLAUDE.md](CLAUDE.md)
 - [../KIROTUX-PKG-BUILD/kiro-labwc/PKGBUILD](../KIROTUX-PKG-BUILD/kiro-labwc/PKGBUILD)
 
 ## 2026.06.30

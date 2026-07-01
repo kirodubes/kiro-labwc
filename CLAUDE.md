@@ -15,7 +15,8 @@ shipped via `nemesis_repo`. Full research + decisions live in the internal
   `themerc-override` (titlebar theme). Live reload: `labwc --reconfigure`.
 - **Desktop shell:** **waybar + mako + swaybg** (ported from kiro-hyprland). waybar uses
   `wlr/taskbar` (labwc has no native waybar workspace module, like wayfire); desktops switch via
-  Super+1..9 / the menu / Super+,. and ..
+  Super+1..9 / the menu / Super+,. and .. A waybar top-left icon (`` U+F0BAF, nf-md-apps)
+  runs `rofi -show drun` — the same command as `SUPER+D`, not a separate launcher backend.
 - **Autostart:** the `autostart` shell script; `GTK_A11Y=none waybar` avoids the ~25s at-spi login
   stall (same fix as kiro-river).
 - **Theming:** **pywal**, with the labwc twist — `set-theme.sh` regenerates BOTH the waybar palette
@@ -30,8 +31,8 @@ shipped via `nemesis_repo`. Full research + decisions live in the internal
   `kiro-keybindings` on Super+Ctrl+S. Snap-to-edge (Super+arrows) as the poor-man's tiling;
   GoToDesktop/SendToDesktop for the 9 Openbox desktops. **No tiling binds** — there's no tiling.
 - `etc/skel/.config/labwc/keybindings.txt` mirrors `rc.xml` (Openbox vocabulary, NOT the tiling
-  template). (`kiro-keybindings` / `/kiro-create-keybindings` still need **labwc** in their
-  WM-detection table — known gap.)
+  template). `kiro-keybindings`'s `WM_MAP` already includes `labwc` (fixed 2026-07-01, along with
+  the other five KIROTUX Wayland editions missing at the time).
 
 ## Patterns / gotchas
 - **Two palette surfaces** — the waybar palette and the Openbox `themerc` titlebar theme are

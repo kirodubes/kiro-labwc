@@ -6,10 +6,15 @@
   "position": "top",
   "height": 24,
   "spacing": 6,
-  "modules-left": ["wlr/taskbar"],
+  "modules-left": ["custom/launcher", "wlr/taskbar"],
   "modules-center": ["clock"],
   "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray"],
 
+  "custom/launcher": {
+    "format": " 󰮯 ",
+    "tooltip-format": "Applications",
+    "on-click": "rofi -show drun"
+  },
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 16,
