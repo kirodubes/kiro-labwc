@@ -3,6 +3,26 @@
 All notable changes to **kiro-labwc** are documented here.
 Format: one dated entry per day (`YYYY.MM.DD`), newest first.
 
+## 2026.07.01
+
+### What Changed
+- **Added Variety wallpaper-rotator autostart + keybinds.** `variety` (configured by
+  `kiro-variety-config`) now autostarts alongside the existing static `swaybg` wallpaper. Ported
+  the ohmychadwm `keybindings.txt` scheme (alt+N/P/T/F/arrows/Up/Down/W): next/previous/trash/
+  favorite/pause/resume/selector, plus alt+shift+N/P/T/F/U combos that also trigger this edition's
+  `set-theme.sh` pywal recolor (waybar + the Openbox titlebar `themerc`). `variety` +
+  `kiro-variety-config` added to `depends=()`.
+
+### Technical Details
+- Verified no existing bare-Alt binds collided with alt+n/p/t/f/w/arrows before adding (only
+  `super`/`W-` combos existed on those keys).
+
+### Files Modified
+- [etc/skel/.config/labwc/rc.xml](etc/skel/.config/labwc/rc.xml)
+- [etc/skel/.config/labwc/autostart](etc/skel/.config/labwc/autostart)
+- [etc/skel/.config/labwc/keybindings.txt](etc/skel/.config/labwc/keybindings.txt)
+- [../KIROTUX-PKG-BUILD/kiro-labwc/PKGBUILD](../KIROTUX-PKG-BUILD/kiro-labwc/PKGBUILD)
+
 ## 2026.06.30
 
 ### What Changed

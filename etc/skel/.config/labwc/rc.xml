@@ -122,6 +122,23 @@
     <keybind key="XF86MonBrightnessUp"><action name="Execute" command="brightnessctl set 5%+" /></keybind>
     <keybind key="XF86MonBrightnessDown"><action name="Execute" command="brightnessctl set 5%-" /></keybind>
 
+    <!-- Wallpaper (Variety) — ohmychadwm's binding scheme, ported. Shift combos also recolor
+         via pywal (this edition's set-theme.sh drives both waybar and the titlebar themerc). -->
+    <keybind key="A-n"><action name="Execute" command="variety --next" /></keybind>
+    <keybind key="A-Right"><action name="Execute" command="variety --next" /></keybind>
+    <keybind key="A-p"><action name="Execute" command="variety --previous" /></keybind>
+    <keybind key="A-Left"><action name="Execute" command="variety --previous" /></keybind>
+    <keybind key="A-t"><action name="Execute" command="variety --trash" /></keybind>
+    <keybind key="A-f"><action name="Execute" command="variety --favorite" /></keybind>
+    <keybind key="A-Up"><action name="Execute" command="variety --pause" /></keybind>
+    <keybind key="A-Down"><action name="Execute" command="variety --resume" /></keybind>
+    <keybind key="A-w"><action name="Execute" command="variety --selector" /></keybind>
+    <keybind key="A-S-n"><action name="Execute" command="sh -c 'variety --next; sleep 1; ~/.config/labwc/scripts/set-theme.sh &quot;$(variety --get)&quot;'" /></keybind>
+    <keybind key="A-S-p"><action name="Execute" command="sh -c 'variety --previous; sleep 1; ~/.config/labwc/scripts/set-theme.sh &quot;$(variety --get)&quot;'" /></keybind>
+    <keybind key="A-S-t"><action name="Execute" command="sh -c 'variety --trash; sleep 1; ~/.config/labwc/scripts/set-theme.sh &quot;$(variety --get)&quot;'" /></keybind>
+    <keybind key="A-S-f"><action name="Execute" command="sh -c 'variety --favorite; sleep 1; ~/.config/labwc/scripts/set-theme.sh &quot;$(variety --get)&quot;'" /></keybind>
+    <keybind key="A-S-u"><action name="Execute" command="sh -c '~/.config/labwc/scripts/set-theme.sh &quot;$(variety --get)&quot;'" /></keybind>
+
     <!-- Screenshots -->
     <keybind key="Print"><action name="Execute" command="sh -c 'grim -g &quot;$(slurp)&quot; - | wl-copy'" /></keybind>
     <keybind key="W-Print"><action name="Execute" command="sh -c 'grim - | wl-copy'" /></keybind>

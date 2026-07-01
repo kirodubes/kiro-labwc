@@ -15,6 +15,7 @@ xdg-user-dirs-update &
 
 # Wallpaper + pywal theming (palette → waybar/mako/titlebar themerc).
 swaybg -m fill -i ~/.config/labwc/bg/kiro.jpg &
+variety &
 ~/.config/labwc/scripts/set-theme.sh &
 
 # Bar (GTK_A11Y=none skips the at-spi bus so waybar paints immediately at login
