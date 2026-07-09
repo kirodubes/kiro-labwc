@@ -18,8 +18,10 @@ the compositor (XML) and window-management vocabulary differ.
   Kiro right-click menu), `autostart` (session services), `environment` (Wayland env),
   `themerc-override` (Tokyo Night titlebar theme), `keybindings.txt`, `bg/kiro.jpg`, and `scripts/`
   (`set-theme.sh`, `import-gsettings.sh`).
-- `etc/skel/.config/waybar/` — the bar (`config.jsonc`, `style.css`, pywal-driven `colors.css`).
-- `etc/skel/.config/{mako,hypr}/` — notifications + the hyprlock/hypridle lock pipeline.
+- `etc/skel/.config/waybar/config-labwc.jsonc` — this edition's waybar layout. The shared waybar
+  `style.css` + pywal-driven `colors.css`, notifications (`mako`) and the hyprlock/hypridle lock
+  pipeline are **not** shipped here — they come from the shared
+  [`kiro-wayland-dotfiles`](https://github.com/kirodubes/kiro-wayland-dotfiles) base (a dependency).
 
 ## Theming — pywal (incl. the titlebar)
 
