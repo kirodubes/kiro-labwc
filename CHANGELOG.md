@@ -3,6 +3,27 @@
 All notable changes to **kiro-labwc** are documented here.
 Format: one dated entry per day (`YYYY.MM.DD`), newest first.
 
+## 2026.09.05
+
+### What Changed
+- **Print now leaves a file behind.** The screenshot binds ran `grim … | wl-copy`, which put the
+  image on the clipboard and nowhere else — no file, no notification, so the key looked dead next to
+  chadwm's scrot bind that writes into `~/Pictures`. Both binds now call the shared
+  `kiro-screenshot region` / `kiro-screenshot screen`, which saves a timestamped PNG in
+  `~/Pictures/Screenshots`, still copies to the clipboard, and notifies with a thumbnail.
+
+### Technical Details
+- The helper is `/usr/bin/kiro-screenshot`, shipped by `kiro-wayland-dotfiles` — already a dependency
+  of this package. The same clipboard-only line had been copy-pasted into twelve editions, so it now
+  lives in exactly one place instead of being fixed twelve times.
+- `labwc/rc.xml`: `<action name="Execute" command="kiro-screenshot region" />`. The old `sh -c` wrapper
+  and its `&quot;` escaping are dropped — a single command needs no shell.
+- **Build `kiro-wayland-dotfiles` first**: it provides the binary this edition's binds call.
+
+### Files Modified
+- `etc/skel/.config/labwc/rc.xml`
+- `etc/skel/.config/labwc/keybindings.txt`
+
 ## 2026.07.09
 
 ### README: correct waybar file + drop shared files it no longer ships

@@ -140,8 +140,8 @@
     <keybind key="A-S-u"><action name="Execute" command="sh -c '~/.config/labwc/scripts/set-theme.sh &quot;$(variety --get)&quot;'" /></keybind>
 
     <!-- Screenshots -->
-    <keybind key="Print"><action name="Execute" command="sh -c 'grim -g &quot;$(slurp)&quot; - | wl-copy'" /></keybind>
-    <keybind key="W-Print"><action name="Execute" command="sh -c 'grim - | wl-copy'" /></keybind>
+    <keybind key="Print"><action name="Execute" command="kiro-screenshot region" /></keybind>
+    <keybind key="W-Print"><action name="Execute" command="kiro-screenshot screen" /></keybind>
 
     <!-- System & session -->
     <keybind key="W-x"><action name="Execute" command="archlinux-logout" /></keybind>
