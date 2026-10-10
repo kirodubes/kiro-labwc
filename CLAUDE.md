@@ -43,6 +43,6 @@ shipped via `nemesis_repo`. Full research + decisions live in the internal
 
 ## Build / delivery
 - Source-of-truth for the config; delivered as the `kiro-labwc` package via
-  `../KIROTUX-PKG-BUILD/kiro-labwc/build.sh` (public recipe → `~/EDU/nemesis_repo/`). After editing
-  here: rebuild the package, then the ISO. See [../CLAUDE.md](../CLAUDE.md) for the full delivery
+  `~/KIRO-PKG-BUILD-APPS/kiro-labwc/build.sh` (public recipe → `~/EDU/nemesis_repo/`). After editing
+  here: rebuild the package, then the ISO. See [KIROTUX/CLAUDE.md](../../KIROTUX/CLAUDE.md) for the full delivery
   architecture.
